@@ -13,6 +13,8 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+//teścik mojego brancha
+
 public partial class GameManager : Node3D
 {
     public static GameManager Instance;
