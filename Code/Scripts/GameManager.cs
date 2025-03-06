@@ -12,8 +12,9 @@ Zfetchuj, uruchom sobie, i zobacz co tam porobiłem ;)
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-public partial class GameManager : Node3D
+public partial class GameManager : Node
 {
     public static GameManager Instance;
     public Node3D Main;
@@ -50,6 +51,8 @@ public partial class GameManager : Node3D
 
         MouseTrace = new RayCast3D();
         Main.AddChild(MouseTrace);
+
+        GD.Print($"Ilosc Entity: {Entity.Entities.Count()}");
     }
 
     public override void _PhysicsProcess(double delta)
